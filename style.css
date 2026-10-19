@@ -9,10 +9,27 @@
 .js-motion [data-reveal="left"]{transform:translate3d(-30px,0,0)}
 .js-motion [data-reveal="right"]{transform:translate3d(30px,0,0)}
 .js-motion [data-reveal].is-visible{opacity:1;transform:translate3d(0,0,0)}
-.hero h1 span{display:inline-block;animation:hero-pop .8s cubic-bezier(.18,.8,.25,1) .2s both}
-.logo-frame{animation:logo-arrive 1s cubic-bezier(.18,.8,.25,1) .25s both}
-.visual-sticker{animation:sticker-arrive .7s cubic-bezier(.18,.8,.25,1) .7s both}
 @keyframes hero-pop{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
 @keyframes logo-arrive{from{opacity:0;transform:translateY(22px) rotate(-4deg) scale(.94)}to{opacity:1;transform:translateY(0) rotate(2deg) scale(1)}}
 @keyframes sticker-arrive{from{opacity:0;transform:translateY(15px) rotate(-8deg) scale(.7)}to{opacity:1;transform:translateY(0) rotate(10deg) scale(1)}}
 @media(prefers-reduced-motion:reduce){.js-motion [data-reveal],.hero h1 span,.logo-frame,.visual-sticker{opacity:1!important;transform:none!important;animation:none!important;transition:none!important;will-change:auto}}
+
+/* Scroll-story: the dark background arrives first, then the content emerges as the visitor scrolls. */
+.scroll-story{height:260vh;min-height:0;padding:0;overflow:clip;position:relative;background:#10110f}
+.hero-stage{height:100vh;min-height:620px;position:sticky;top:0;padding:24px 7% 0;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between}
+.scroll-story .grid-texture{opacity:.28;animation:grid-breathe 8s ease-in-out infinite alternate}
+.scroll-story .hero-layout{flex:1;min-height:0;width:100%;}
+.story-reveal{opacity:0;transform:translateY(42px) scale(.97);filter:blur(5px);transition:opacity .75s ease,transform .85s cubic-bezier(.16,1,.3,1),filter .75s ease;will-change:opacity,transform,filter}
+.story-reveal.story-on{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}
+.scroll-story .hero-copy h1{transform-origin:left center}
+.scroll-story .logo-frame{transition:box-shadow .7s ease,transform .9s cubic-bezier(.16,1,.3,1)}
+.scroll-story .hero-visual.story-on .logo-frame{transform:rotate(2deg) scale(1.035);box-shadow:27px 27px 0 var(--green)}
+.story-progress{position:absolute;bottom:0;left:0;height:3px;width:100%;background:#343730;z-index:5}
+.story-progress span{display:block;width:0;height:100%;background:var(--green);box-shadow:0 0 12px #c8f16980}
+@keyframes grid-breathe{from{opacity:.15;transform:translateY(0)}to{opacity:.32;transform:translateY(-8px)}}
+@media(max-width:850px){.hero-stage{padding-left:5%;padding-right:5%}}
+@media(max-width:620px){.scroll-story{height:240vh}.hero-stage{height:calc(100svh - 66px);min-height:600px;padding:18px 6% 0}.scroll-story .hero-layout{display:flex;flex-direction:column;justify-content:center;gap:0}.scroll-story .hero-copy{padding:22px 0 0}.scroll-story .hero-visual{height:245px;min-height:245px;margin:0}.scroll-story .logo-frame{width:170px}.scroll-story .hero-footnote{display:none}.scroll-story .hero-bottomline{padding:12px 0 15px}.scroll-story .hero-topline{font-size:7px}.scroll-story .hero h1{font-size:clamp(48px,13vw,72px);margin:18px 0}.scroll-story .hero-description{font-size:11px;line-height:1.6}.scroll-story .hero-actions{margin-top:17px}.scroll-story .visual-index{font-size:8px}.scroll-story .visual-sticker{width:58px;height:58px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){.scroll-story{height:auto;overflow:visible}.hero-stage{height:auto;min-height:0;position:relative;padding:24px 6% 0}.story-reveal{opacity:1;transform:none;filter:none;transition:none}.story-progress{display:none}}
+
+[data-lower-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .8s cubic-bezier(.16,1,.3,1)}[data-lower-reveal].is-visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){[data-lower-reveal]{opacity:1;transform:none;transition:none}}
