@@ -1,5 +1,5 @@
 // Static GitHub Pages form. Connect Formspree before accepting real applications.
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORMSPREE_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/myekapvb";
 const form = document.getElementById("applicationForm");
 const status = document.getElementById("formStatus");
 document.getElementById("year").textContent = new Date().getFullYear();
