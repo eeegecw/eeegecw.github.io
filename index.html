@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="AEEE ExCom Call — step forward, contribute, and help shape the student community.">
+  <title>AEEE — ExCom Call</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="AEEE home">
+      <span class="brand-logo"><img src="aeee-logo.jpeg" alt="EEE association logo"></span>
+      <span class="brand-name">AEEE<span> / STUDENT BODY</span></span>
+    </a>
+    <div class="location">GEC WAYANAD <span class="location-dot"></span> KERALA, INDIA</div>
+    <a class="header-link" href="#apply">EXCOM CALL <span>↘</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="grid-texture"></div>
+      <div class="hero-topline"><span>01 — CALL FOR LEADERS</span><span>2026 / 2027</span></div>
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="green-dot"></span> THE NEXT CHAPTER IS YOURS</p>
+          <h1>MAKE<br>YOURSELF<br><span>COUNT<span class="period">.</span></span></h1>
+          <p class="hero-description">Not just a position. A chance to build, organise, create, and leave something better than you found it.</p>
+          <div class="hero-actions">
+            <a class="button button-green" href="#apply">STEP INTO EXCOM <span>↗</span></a>
+            <a class="scroll-link" href="#apply">SCROLL TO APPLY <span>↓</span></a>
+          </div>
+          <div class="hero-footnote"><span class="footnote-mark">✳</span><span>FOR THE ONES WHO WANT TO DO MORE.<br><b>IDEAS ARE GOOD. ACTION IS BETTER.</b></span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-index">AEEE<br>EXCOM<br><span>CALL_26</span></div>
+          <div class="logo-frame">
+            <img src="aeee-logo.jpeg" alt="EEE association emblem">
+            <div class="frame-corner corner-tl"></div><div class="frame-corner corner-br"></div>
+          </div>
+          <div class="orbit-label label-top">STUDENT-LED / COMMUNITY-DRIVEN</div>
+          <div class="orbit-label label-bottom">TAKE THE INITIATIVE <span>↗</span></div>
+          <div class="visual-sticker">YOUR<br>MOVE<span>↘</span></div>
+        </div>
+      </div>
+      <div class="hero-bottomline"><span>ASSOCIATION OF ELECTRICAL & ELECTRONICS ENGINEERS</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="call-section" id="apply">
+      <div class="form-intro">
+        <p class="section-index">02 — YOUR MOVE</p>
+        <h2>THE FLOOR<br>IS <span>YOURS.</span></h2>
+        <p class="intro-text">Want to help run AEEE? Tell us a little about yourself, what you can bring to the team, and where you want to make a difference.</p>
+        <div class="form-side-note"><span class="note-line"></span><span>NO PERFECT CV NEEDED.<br>JUST INITIATIVE, IDEAS & INTENT.</span></div>
+        <div class="side-big-number">01<span>/</span>01</div>
+      </div>
+
+      <form class="application-form" id="applicationForm">
+        <div class="form-header">
+          <div><span class="form-kicker">AEEE / EXCOM CALL</span><h3>Tell us about you.</h3></div>
+          <span class="form-required">* REQUIRED</span>
+        </div>
+        <label for="name">01 / FULL NAME <span>*</span></label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="100" required>
+
+        <div class="two-columns">
+          <div>
+            <label for="semester">02 / SEMESTER <span>*</span></label>
+            <select id="semester" name="semester" required>
+              <option value="">Select semester</option><option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option><option>S7</option><option>S8</option>
+            </select>
+          </div>
+          <div>
+            <label for="phone">03 / PHONE <span>*</span></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." maxlength="20" required>
+          </div>
+        </div>
+
+        <label for="email">04 / EMAIL ADDRESS <span>*</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="150" required>
+
+        <label for="capable">05 / WHAT ARE YOU CAPABLE OF? <span>*</span></label>
+        <textarea id="capable" name="capable" rows="4" maxlength="1200" placeholder="Tell us what you enjoy doing, what you can contribute, or what you want to learn..." required></textarea>
+
+        <label for="skills">06 / SKILLS & INTERESTS</label>
+        <input id="skills" name="skills" type="text" maxlength="300" placeholder="e.g. design, organising, coding, media, speaking">
+
+        <label class="consent"><input type="checkbox" name="consent" required><span>I confirm these details are accurate and agree to be contacted about the AEEE ExCom call.</span></label>
+        <button class="button button-green submit-button" type="submit">SEND APPLICATION <span>↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Your details should only be accessed by the authorised election team. Form submissions must be connected and tested before launch.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="footer-brand" href="#home"><img src="aeee-logo.jpeg" alt=""><span>AEEE <small>EXCOM CALL / 2026</small></span></a>
+    <span class="footer-message">MAKE SOMETHING MATTER.</span>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GEC WAYANAD</span><span>BUILT FOR THE NEXT CHAPTER.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
