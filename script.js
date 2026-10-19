@@ -36,32 +36,9 @@ if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-mot
   document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
 }
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  status.className = "form-status";
-  const button = form.querySelector('button[type="submit"]');
-  const original = button.innerHTML;
-  button.disabled = true;
-  button.textContent = "SENDING...";
-  try {
-    const response = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { "Accept": "application/json" }
-    });
-    if (response.ok) {
-      form.reset();
-      status.classList.add("success");
-      status.textContent = "Application submitted. Thank you for stepping forward!";
-    } else {
-      status.classList.add("error");
-      status.textContent = "Submission failed. Please check your details and try again.";
-    }
-  } catch (error) {
-    status.classList.add("error");
-    status.textContent = "Unable to submit right now. Check your connection and try again.";
-  } finally {
-    button.disabled = false;
-    button.innerHTML = original;
-  }
-});
+// Use a normal HTML POST to Formspree. This avoids fetch/CORS failures on some browsers/networks.
+if (form) {
+  form.action = FORMSPREE_ENDPOINT;
+  form.method = "POST";
+  form.removeAttribute("target");
+}
