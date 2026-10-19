@@ -4,36 +4,46 @@ const form = document.getElementById("applicationForm");
 const status = document.getElementById("formStatus");
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// Mark content for reveal-on-scroll. Content remains visible if JS or the observer is unavailable.
-document.body.classList.add("js-motion");
-const revealTargets = [
-  [".hero-topline", "left"], [".hero-copy", "left"], [".hero-visual", "right"],
-  [".hero-bottomline", "up"], [".form-intro", "left"], [".application-form", "right"],
-  [".footer-brand", "up"], [".footer-message", "up"], [".back-top", "up"], [".footer-bottom", "up"]
-];
-revealTargets.forEach(([selector, direction]) => {
-  document.querySelectorAll(selector).forEach((element) => {
-    element.dataset.reveal = direction;
-  });
-});
-// Stagger key form fields so they appear in a gentle sequence.
-const formFields = document.querySelectorAll(".application-form > label, .application-form > input, .application-form > textarea, .application-form > .two-columns, .application-form > .consent, .application-form > .submit-button");
-formFields.forEach((element, index) => {
-  element.dataset.reveal = "up";
-  element.style.setProperty("--reveal-delay", `${Math.min(index * 55, 330)}ms`);
-});
-if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  const observer = new IntersectionObserver((entries) => {
+// Scroll-story: background is visible immediately; each layer pops in as the user scrolls.
+const story = document.querySelector(".scroll-story");
+const storyItems = [...document.querySelectorAll(".story-reveal")];
+const progressBar = document.querySelector(".story-progress span");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (story && !reduceMotion) {
+  const updateStory = () => {
+    const rect = story.getBoundingClientRect();
+    const travel = Math.max(1, story.offsetHeight - window.innerHeight);
+    const progress = Math.min(1, Math.max(0, -rect.top / travel));
+    storyItems.forEach((item) => {
+      const trigger = Number(item.dataset.story || 0);
+      item.classList.toggle("story-on", progress >= trigger);
+    });
+    if (progressBar) progressBar.style.width = `${progress * 100}%`;
+  };
+  window.addEventListener("scroll", updateStory, { passive: true });
+  window.addEventListener("resize", updateStory);
+  updateStory();
+} else {
+  storyItems.forEach((item) => item.classList.add("story-on"));
+  if (progressBar) progressBar.style.width = "100%";
+}
+
+// Reveal the application section and footer as they enter view.
+const lowerTargets = [".form-intro", ".application-form", ".footer-brand", ".footer-message", ".back-top", ".footer-bottom"];
+lowerTargets.forEach((selector) => document.querySelectorAll(selector).forEach((el) => el.dataset.lowerReveal = "true"));
+if ("IntersectionObserver" in window && !reduceMotion) {
+  const lowerObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+        lowerObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
-  document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+  document.querySelectorAll("[data-lower-reveal]").forEach((el) => lowerObserver.observe(el));
 } else {
-  document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+  document.querySelectorAll("[data-lower-reveal]").forEach((el) => el.classList.add("is-visible"));
 }
 
 form.addEventListener("submit", async (event) => {
