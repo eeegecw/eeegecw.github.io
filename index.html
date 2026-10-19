@@ -1,108 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10110f">
-  <meta name="description" content="AEEE Execom Call — step forward, contribute, and help shape the student community.">
-  <title>AEEE — Execom Call</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="header">
-    <a class="brand" href="#home" aria-label="AEEE home">
-      <span class="brand-logo"><img src="aeee-logo.jpeg" alt="EEE association logo"></span>
-      <span class="brand-name">AEEE<span> / ASSOCIATION OF ELECTRICAL AND ELECTRONICS ENGINEERS</span></span>
-    </a>
-    <div class="location">GEC WAYANAD <span class="location-dot"></span> MANANTHAVADY, WAYANAD</div>
-    <a class="header-link" href="#apply">EXECOM CALL <span>↘</span></a>
-  </header>
+// AEEE ExCom website interactions and scroll animations.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/myekapvb";
+const form = document.getElementById("applicationForm");
+const status = document.getElementById("formStatus");
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  <main>
-    <section class="hero" id="home">
-      <div class="grid-texture"></div>
-      <div class="hero-topline"><span>01 — CALL FOR LEADERS</span><span>2026 / 2027</span></div>
-      <div class="hero-layout">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="green-dot"></span> THE NEXT CHAPTER IS YOURS</p>
-          <h1>MAKE<br>YOURSELF<br><span>COUNT<span class="period">.</span></span></h1>
-          <p class="hero-description">Not just a position. A chance to build, organise, create, and leave something better than you found it.</p>
-          <div class="hero-actions">
-            <a class="button button-green" href="#apply">STEP INTO EXECOM <span>↗</span></a>
-            <a class="scroll-link" href="#apply">SCROLL TO APPLY <span>↓</span></a>
-          </div>
-          <div class="hero-footnote"><span class="footnote-mark">✳</span><span>FOR THE ONES WHO WANT TO DO MORE.<br><b>IDEAS ARE GOOD. ACTION IS BETTER.</b></span></div>
-        </div>
-        <div class="hero-visual">
-          <div class="visual-index">AEEE<br>EXECOM<br><span>CALL_26</span></div>
-          <div class="logo-frame">
-            <img src="aeee-logo.jpeg" alt="EEE association emblem">
-            <div class="frame-corner corner-tl"></div><div class="frame-corner corner-br"></div>
-          </div>
-          <div class="orbit-label label-top">GOVERNMENT ENGINEERING COLLEGE, WAYANAD</div>
-          <div class="orbit-label label-bottom">TAKE THE INITIATIVE <span>↗</span></div>
-          <div class="visual-sticker">YOUR<br>MOVE<span>↘</span></div>
-        </div>
-      </div>
-      <div class="hero-bottomline"><span>ASSOCIATION OF ELECTRICAL & ELECTRONICS ENGINEERS</span><span>SCROLL TO EXPLORE ↓</span></div>
-    </section>
+// Mark content for reveal-on-scroll. Content remains visible if JS or the observer is unavailable.
+document.body.classList.add("js-motion");
+const revealTargets = [
+  [".hero-topline", "left"], [".hero-copy", "left"], [".hero-visual", "right"],
+  [".hero-bottomline", "up"], [".form-intro", "left"], [".application-form", "right"],
+  [".footer-brand", "up"], [".footer-message", "up"], [".back-top", "up"], [".footer-bottom", "up"]
+];
+revealTargets.forEach(([selector, direction]) => {
+  document.querySelectorAll(selector).forEach((element) => {
+    element.dataset.reveal = direction;
+  });
+});
+// Stagger key form fields so they appear in a gentle sequence.
+const formFields = document.querySelectorAll(".application-form > label, .application-form > input, .application-form > textarea, .application-form > .two-columns, .application-form > .consent, .application-form > .submit-button");
+formFields.forEach((element, index) => {
+  element.dataset.reveal = "up";
+  element.style.setProperty("--reveal-delay", `${Math.min(index * 55, 330)}ms`);
+});
+if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -35px 0px" });
+  document.querySelectorAll("[data-reveal]").forEach((element) => observer.observe(element));
+} else {
+  document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+}
 
-    <section class="call-section" id="apply">
-      <div class="form-intro">
-        <p class="section-index">02 — YOUR MOVE</p>
-        <h2>THE FLOOR<br>IS <span>YOURS.</span></h2>
-        <p class="intro-text">Want to help run AEEE? Tell us a little about yourself, what you can bring to the team, and where you want to make a difference.</p>
-        <div class="form-side-note"><span class="note-line"></span><span>NO PERFECT CV NEEDED.<br>JUST INITIATIVE, IDEAS & INTENT.</span></div>
-        <div class="side-big-number">01<span>/</span>01</div>
-      </div>
-
-      <form class="application-form" id="applicationForm" action="https://formspree.io/f/myekapvb" method="POST">
-        <div class="form-header">
-          <div><span class="form-kicker">AEEE / EXECOM CALL</span><h3>Tell us about you.</h3></div>
-          <span class="form-required">* REQUIRED</span>
-        </div>
-        <label for="name">01 / FULL NAME <span>*</span></label>
-        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="100" required>
-
-        <div class="two-columns">
-          <div>
-            <label for="semester">02 / SEMESTER <span>*</span></label>
-            <select id="semester" name="semester" required>
-              <option value="">Select semester</option><option>S1</option><option>S3</option><option>S5</option><option>S7</option>
-            </select>
-          </div>
-          <div>
-            <label for="phone">03 / PHONE <span>*</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." maxlength="20" required>
-          </div>
-        </div>
-
-        <label for="email">04 / EMAIL ADDRESS <span>*</span></label>
-        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="150" required>
-
-        <label for="capable">05 / WHAT ARE YOU CAPABLE OF? <span>*</span></label>
-        <textarea id="capable" name="capable" rows="4" maxlength="1200" placeholder="Tell us what you enjoy doing, what you can contribute, or what you want to learn..." required></textarea>
-
-        <label for="skills">06 / SKILLS & INTERESTS</label>
-        <input id="skills" name="skills" type="text" maxlength="300" placeholder="e.g. design, organising, coding, media, speaking">
-
-        <label class="consent"><input type="checkbox" name="consent" required><span>I confirm these details are accurate and agree to be contacted about the AEEE Execom call.</span></label>
-        <button class="button button-green submit-button" type="submit">SEND APPLICATION <span>↗</span></button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        <p class="privacy-note">Your details should only be accessed by the authorised election team. Form submissions must be connected and tested before launch.</p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <a class="footer-brand" href="#home"><img src="aeee-logo.jpeg" alt=""><span>AEEE <small>EXECOM CALL / 2026</small></span></a>
-    <span class="footer-message">MAKE SOMETHING MATTER.</span>
-    <a class="back-top" href="#home">BACK TO TOP ↑</a>
-    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GEC WAYANAD</span><span>BUILT FOR THE NEXT CHAPTER.</span></div>
-  </footer>
-  <script src="script.js"></script>
-</body>
-</html>
+// Use a normal HTML POST to Formspree. This avoids fetch/CORS failures on some browsers/networks.
+if (form) {
+  form.action = FORMSPREE_ENDPOINT;
+  form.method = "POST";
+  form.removeAttribute("target");
+}
