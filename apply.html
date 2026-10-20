@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="Apply to join the AEEE ExCom at Government Engineering College Wayanad.">
+  <title>ExCom Application | AEEE GEC Wayanad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="application-page">
+  <header class="site-header">
+    <a class="mini-brand" href="index.html" aria-label="AEEE home"><img src="aeee-logo.png" alt="AEEE logo"><span>AEEE</span></a>
+    <span class="location">GOVERNMENT ENGINEERING COLLEGE WAYANAD <i></i></span>
+    <a class="header-cta" href="#application">EXCOM CALL <span>↘</span></a>
+  </header>
+  <main>
+    <section class="application-section" id="application">
+      <div class="form-heading reveal">
+        <p class="section-kicker"><span>01</span> / EXCOM APPLICATIONS</p>
+        <h2>MAKE YOUR<br><span>MARK.</span></h2>
+        <p>Want to help run AEEE? Tell us a little about yourself and how you would like to contribute. You don't need to have everything figured out — just bring your curiosity and initiative.</p>
+        <div class="open-note"><span class="status-dot"></span> APPLICATIONS OPEN <span class="note-divider">/</span> S1 · S3 · S5 · S7</div>
+      </div>
+
+      <form class="application-form reveal" id="applicationForm" action="https://formspree.io/f/myekapvb" method="POST">
+        <div class="form-topline"><span>APPLICATION FORM</span><span>FIELDS MARKED * ARE REQUIRED</span></div>
+        <label for="name">FULL NAME <b>*</b></label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required>
+
+        <div class="field-row">
+          <div class="field-group">
+            <label for="semester">SEMESTER <b>*</b></label>
+            <select id="semester" name="semester" required>
+              <option value="" selected disabled>Select semester</option>
+              <option value="S1">S1</option><option value="S3">S3</option><option value="S5">S5</option><option value="S7">S7</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="phone">PHONE NUMBER <b>*</b></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." maxlength="20" required>
+          </div>
+        </div>
+
+        <label for="email">EMAIL ADDRESS <b>*</b></label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="150" required>
+
+        <label for="capable">WHAT ARE YOU CAPABLE OF? <b>*</b></label>
+        <textarea id="capable" name="capable" rows="4" maxlength="1200" placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..." required></textarea>
+
+        <label for="skills">SKILLS & INTERESTS</label>
+        <input id="skills" name="skills" type="text" maxlength="300" placeholder="e.g. design, organising, coding, media, speaking">
+
+        <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I confirm these details are accurate and agree to be contacted about the AEEE ExCom call.</span></label>
+        <button class="submit-button" type="submit"><span class="button-text">SEND APPLICATION</span><span class="button-arrow">↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Your details will be used only for the ExCom application process and should be accessed only by the authorised team.</p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home"><img src="aeee-logo.png" alt=""><span>AEEE<small>GEC WAYANAD</small></span></a>
+    <p>GOOD IDEAS DESERVE<br>PEOPLE WHO BUILD THEM.</p>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD</span><span>LEARN. BUILD. BELONG.</span></div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
