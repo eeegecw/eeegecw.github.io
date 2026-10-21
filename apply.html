@@ -56,12 +56,102 @@
       </form>
     </section>
   </main>
-  <footer class="site-footer">
-    <a class="footer-brand" href="#home"><img src="aeee-logo.png" alt=""><span>AEEE<small>GEC WAYANAD</small></span></a>
-    <p>GOVERNMENT ENGINEERING COLLEGE<br>ASSOCIATION OF ELECTRICAL AND ELECTRONICS ENGINEERS</p>
-    <a class="back-top" href="#home">BACK TO TOP ↑</a>
-    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD</span><span>LEARN. BUILD. BELONG.</span></div>
+    <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+
+    <div class="section-container footer-grid">
+
+      <!-- Footer branding -->
+      <div class="footer-about">
+
+        <a class="footer-brand" href="#home">
+          <img src="aeee-logo-white.png" alt="AEEE logo">
+
+          <span>
+            AEEE
+            <small>GEC WAYANAD</small>
+          </span>
+        </a>
+
+        <p>
+          Association of Electrical and Electronics Engineers.
+          Learn, build and lead together.
+        </p>
+
+      </div>
+
+
+      <!-- Quick navigation -->
+      <div class="footer-links">
+
+        <h3>Quick links</h3>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#registration">Execom registration</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+
+      <!-- Contact and social links -->
+      <div class="footer-contact">
+
+        <h3>Get in touch</h3>
+
+        <a href="mailto:YOUR_EMAIL_HERE">
+          aeeegecw2026@example.com
+        </a>
+
+        <a href="tel:+91YOURNUMBER">
+          +91 7994579262
+        </a>
+
+        <a
+          href="https://www.instagram.com/aeee_gecw?exln=MTR0N2IwNW5pcjl0OQ=="
+          target="_blank"
+          rel="noopener noreferrer">
+          Instagram ↗
+        </a>
+
+        <a
+          href="https://wa.me/917994579262"
+          target="_blank"
+          rel="noopener noreferrer">
+          WhatsApp ↗
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- Footer bottom bar -->
+    <div class="section-container footer-bottom">
+
+      <span>
+        © <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD
+      </span>
+
+      <a href="#home">BACK TO TOP ↑</a>
+
+      <span>LEARN. BUILD. BELONG.</span>
+
+    </div>
+
   </footer>
+
+
+  <!-- SCRIPTS -->
   <script src="script.js"></script>
+
+  <script>
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
 </body>
 </html>
