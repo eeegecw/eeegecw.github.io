@@ -503,86 +503,154 @@ html {
   }
 }
 
-/* FIX: FOOTER CONTENT ALIGNMENT */
 
-.application-page .site-footer {
+/* =====================================
+   AEEE FOOTER — LIGHT THEME + SPACING
+===================================== */
+
+.site-footer {
   width: 100%;
   box-sizing: border-box;
-  padding: 65px 0 24px;
-  background: #090a08;
-  color: #f4f3ed;
+  padding: 65px 0 25px;
+  background: #f4f3ed;
+  color: #10110f;
+  border-top: 1px solid #deded5;
 }
 
-.application-page .site-footer .section-container {
-  width: min(1200px, calc(100% - 80px));
+/* Center content and keep it away from screen edges */
+.site-footer .section-container {
+  width: min(1200px, calc(100% - 100px));
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
 }
 
-.application-page .footer-grid {
+/* Main footer layout */
+.site-footer .footer-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
   align-items: start;
-  padding-bottom: 45px;
+  gap: 80px;
+  padding-bottom: 50px;
 }
 
-.application-page .footer-about,
-.application-page .footer-contact {
-  min-width: 0;
+/* Brand */
+.site-footer .footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #10110f;
+  text-decoration: none;
 }
 
-.application-page .footer-about p {
+.site-footer .footer-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Brand subtitle */
+.site-footer .footer-brand small {
+  display: block;
+  margin-top: 5px;
+  color: #62645b;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+/* Description */
+.site-footer .footer-about p {
   max-width: 350px;
-  line-height: 1.8;
+  margin-top: 20px;
+  color: #62645b;
+  font-size: 14px;
+  line-height: 1.9;
 }
 
-.application-page .footer-contact {
+/* Contact column */
+.site-footer .footer-contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
 }
 
-.application-page .footer-bottom {
+.site-footer .footer-contact h3 {
+  margin: 0 0 8px;
+  color: #10110f;
+  font-size: 17px;
+}
+
+.site-footer .footer-contact a {
+  color: #55574f;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.site-footer .footer-contact a:hover {
+  color: #6c8f1e;
+}
+
+/* Bottom bar */
+.site-footer .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 16px;
-  padding-top: 22px;
-  border-top: 1px solid #30322b;
-  font-size: 11px;
+  gap: 20px;
+  padding-top: 25px;
+  border-top: 1px solid #deded5;
+  color: #62645b;
+  font-size: 10px;
   line-height: 1.8;
+  letter-spacing: 1.2px;
 }
 
-.application-page .footer-bottom a {
-  color: #c5f568;
+.site-footer .footer-bottom a {
+  color: #10110f;
+  font-weight: 700;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.application-page .footer-bottom a:hover {
-  color: #fff;
+.site-footer .footer-bottom a:hover {
+  color: #789f25;
 }
 
+/* Tablet */
+@media (max-width: 800px) {
+  .site-footer .section-container {
+    width: calc(100% - 60px);
+  }
+
+  .site-footer .footer-grid {
+    gap: 45px;
+  }
+}
+
+/* Mobile */
 @media (max-width: 600px) {
-  .application-page .site-footer .section-container {
+  .site-footer {
+    padding-top: 45px;
+  }
+
+  .site-footer .section-container {
     width: calc(100% - 40px);
   }
 
-  .application-page .footer-grid {
+  .site-footer .footer-grid {
     grid-template-columns: 1fr;
     gap: 35px;
+    padding-bottom: 35px;
   }
 
-  .application-page .footer-bottom {
+  .site-footer .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
   }
 }
-
-.privacy-note{color:#888b80}
-.site-footer{background:#f4f3ee;color:#10110f;border-top:1px solid #d8d7d0}.footer-brand small,.site-footer>p,.back-top{color:#5d5f58}.footer-bottom{border-top-color:#d8d7d0;color:#686a62}
-@media(max-width:760px){.application-section{padding-left:20px;padding-right:20px}.header-cta{min-width:auto;padding:11px 10px}}
