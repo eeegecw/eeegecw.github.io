@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,65 +6,287 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10110f">
   <meta name="description" content="Apply to join the AEEE ExCom at Government Engineering College Wayanad.">
+
   <title>Execom Application | AEEE GEC Wayanad</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="application-page">
+
+<body class="application-page" id="top">
+
+  <!-- HEADER -->
   <header class="site-header">
-    <a class="mini-brand" href="index.html" aria-label="AEEE home"><img src="aeee-logo.png" alt="AEEE logo"><span>AEEE</span></a>
-    <span class="location">GOVERNMENT ENGINEERING COLLEGE WAYANAD <i></i></span>
-    <a class="header-cta" href="#application">EXCOM CALL <span>↘</span></a>
+
+    <a class="mini-brand" href="index.html" aria-label="AEEE home">
+      <img src="aeee-logo.png" alt="AEEE logo">
+      <span>AEEE</span>
+    </a>
+
+    <span class="location">
+      GOVERNMENT ENGINEERING COLLEGE WAYANAD <i></i>
+    </span>
+
+    <a class="header-cta" href="#application">
+      EXCOM CALL <span>↘</span>
+    </a>
+
   </header>
+
+
   <main>
+
+    <!-- APPLICATION SECTION -->
     <section class="application-section" id="application">
+
       <div class="form-heading reveal">
-        <p class="section-kicker"><span>01</span> / EXCOM APPLICATIONS</p>
+
+        <p class="section-kicker">
+          <span>01</span> / EXCOM APPLICATIONS
+        </p>
+
         <h2>MAKE YOUR<br><span>MARK.</span></h2>
-        <p>Want to help run AEEE? Tell us a little about yourself and how you would like to contribute. You don't need to have everything figured out — just bring your curiosity and initiative.</p>
-        <div class="open-note"><span class="status-dot"></span> APPLICATIONS OPEN <span class="note-divider">/</span> S1 · S3 · S5 · S7</div>
-      </div>
 
-      <form class="application-form reveal" id="applicationForm" action="https://formspree.io/f/myekapvb" method="POST">
-        <div class="form-topline"><span>APPLICATION FORM</span><span>FIELDS MARKED * ARE REQUIRED</span></div>
-        <label for="name">FULL NAME <b>*</b></label>
-        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required>
+        <p>
+          Want to help run AEEE? Tell us a little about yourself and how you
+          would like to contribute. You don't need to have everything
+          figured out — just bring your curiosity and initiative.
+        </p>
 
-        <div class="field-row">
-          <div class="field-group">
-            <label for="semester">SEMESTER <b>*</b></label>
-            <select id="semester" name="semester" required>
-              <option value="" selected disabled>Select semester</option>
-              <option value="S1">S1</option><option value="S3">S3</option><option value="S5">S5</option><option value="S7">S7</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <label for="phone">PHONE NUMBER <b>*</b></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." maxlength="20" required>
-          </div>
+        <div class="open-note">
+          <span class="status-dot"></span>
+          APPLICATIONS OPEN
+          <span class="note-divider">/</span>
+          S1 · S3 · S5 · S7
         </div>
 
-        <label for="capable">WHAT ARE YOU CAPABLE OF? <b>*</b></label>
-        <textarea id="capable" name="capable" rows="4" maxlength="1200" placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..." required></textarea>
+      </div>
 
-        <label for="skills">SKILLS & INTERESTS</label>
-        <input id="skills" name="skills" type="text" maxlength="300" placeholder="e.g. design, organising, coding, media, speaking">
 
-        <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I confirm these details are accurate and agree to be contacted about the AEEE ExCom call.</span></label>
-        <button class="submit-button" type="submit"><span class="button-text">SEND APPLICATION</span><span class="button-arrow">↗</span></button>
-        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        <p class="privacy-note">Your details will be used only for the Execom application process and should be accessed only by the authorised team.</p>
+      <!-- APPLICATION FORM -->
+      <form
+        class="application-form reveal"
+        id="applicationForm"
+        action="https://formspree.io/f/myekapvb"
+        method="POST">
+
+        <div class="form-topline">
+          <span>APPLICATION FORM</span>
+          <span>FIELDS MARKED * ARE REQUIRED</span>
+        </div>
+
+        <!-- FULL NAME -->
+        <label for="name">FULL NAME <b>*</b></label>
+
+        <input
+          id="name"
+          name="name"
+          type="text"
+          autocomplete="name"
+          placeholder="Your full name"
+          maxlength="100"
+          required>
+
+
+        <!-- SEMESTER AND PHONE -->
+        <div class="field-row">
+
+          <div class="field-group">
+
+            <label for="semester">SEMESTER <b>*</b></label>
+
+            <select id="semester" name="semester" required>
+              <option value="" selected disabled>Select semester</option>
+              <option value="S1">S1</option>
+              <option value="S3">S3</option>
+              <option value="S5">S5</option>
+              <option value="S7">S7</option>
+            </select>
+
+          </div>
+
+          <div class="field-group">
+
+            <label for="phone">PHONE NUMBER <b>*</b></label>
+
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              autocomplete="tel"
+              placeholder="+91 ..."
+              maxlength="20"
+              required>
+
+          </div>
+
+        </div>
+
+
+        <!-- CAPABILITIES -->
+        <label for="capable">
+          WHAT ARE YOU CAPABLE OF? <b>*</b>
+        </label>
+
+        <textarea
+          id="capable"
+          name="capable"
+          rows="4"
+          maxlength="1200"
+          placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..."
+          required></textarea>
+
+
+        <!-- SKILLS -->
+        <label for="skills">SKILLS &amp; INTERESTS</label>
+
+        <input
+          id="skills"
+          name="skills"
+          type="text"
+          maxlength="300"
+          placeholder="e.g. design, organising, coding, media, speaking">
+
+
+        <!-- CONSENT -->
+        <label class="consent">
+
+          <input
+            type="checkbox"
+            name="consent"
+            value="yes"
+            required>
+
+          <span>
+            I confirm these details are accurate and agree to be contacted
+            about the AEEE ExCom call.
+          </span>
+
+        </label>
+
+
+        <!-- SUBMIT BUTTON -->
+        <button class="submit-button" type="submit">
+          <span class="button-text">SEND APPLICATION</span>
+          <span class="button-arrow">↗</span>
+        </button>
+
+        <p
+          class="form-status"
+          id="formStatus"
+          role="status"
+          aria-live="polite"></p>
+
+        <p class="privacy-note">
+          Your details will be used only for the Execom application process
+          and should be accessed only by the authorised team.
+        </p>
+
       </form>
+
     </section>
+
   </main>
-  <footer class="site-footer">
-    <a class="footer-brand" href="#home"><img src="aeee-logo.png" alt=""><span>AEEE<small>GEC WAYANAD</small></span></a>
-    <p>GOOD IDEAS DESERVE<br>PEOPLE WHO BUILD THEM.</p>
-    <a class="back-top" href="#home">BACK TO TOP ↑</a>
-    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD</span><span>LEARN. BUILD. BELONG.</span></div>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="footer">
+
+    <a class="footer-brand" href="index.html">
+      <img src="aeee-logo.png" alt="AEEE logo">
+
+      <span>
+        AEEE
+        <small>GEC WAYANAD</small>
+      </span>
+    </a>
+
+    <p>
+      GOOD IDEAS DESERVE<br>
+      PEOPLE WHO BUILD THEM.
+    </p>
+
+    <a class="back-top" href="#top">BACK TO TOP ↑</a>
+
+    <div class="footer-bottom">
+
+      <span>
+        © <span id="year"></span>
+        AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD
+      </span>
+
+      <span>LEARN. BUILD. BELONG.</span>
+
+    </div>
+
   </footer>
+
+
+  <!-- EXISTING SITE SCRIPT -->
   <script src="script.js"></script>
+
+  <!-- COPYRIGHT YEAR -->
+  <script>
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear();
+    }
+  </script>
+
+  <!-- FORM SUBMISSION AND SUCCESS REDIRECT -->
+  <script>
+    const applicationForm = document.getElementById("applicationForm");
+    const formStatus = document.getElementById("formStatus");
+    const submitButton = applicationForm.querySelector(".submit-button");
+    const buttonText = submitButton.querySelector(".button-text");
+
+    applicationForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+
+      // Validate required fields before submitting
+      if (!applicationForm.reportValidity()) {
+        return;
+      }
+
+      // Prevent duplicate submissions while sending
+      submitButton.disabled = true;
+      buttonText.textContent = "SENDING APPLICATION...";
+      formStatus.textContent = "";
+
+      try {
+        const response = await fetch(applicationForm.action, {
+          method: "POST",
+          body: new FormData(applicationForm),
+          headers: {
+            "Accept": "application/json"
+          }
+        });
+
+        if (response.ok) {
+          // Redirect only after successful submission
+          window.location.href = "thankyou.html";
+        } else {
+          formStatus.textContent =
+            "Your application could not be submitted. Please try again.";
+
+          submitButton.disabled = false;
+          buttonText.textContent = "SEND APPLICATION";
+        }
+
+      } catch (error) {
+        formStatus.textContent =
+          "Connection error. Please check your internet and try again.";
+
+        submitButton.disabled = false;
+        buttonText.textContent = "SEND APPLICATION";
+      }
+    });
+  </script>
+
 </body>
 </html>
