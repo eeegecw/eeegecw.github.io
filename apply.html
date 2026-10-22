@@ -1,494 +1,72 @@
-
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10110f">
-  <meta name="description" content="Apply to join the AEEE Execom at Government Engineering College Wayanad.">
-
-  <title>Execom Application | AEEE GEC Wayanad</title>
-
+  <meta name="description" content="Apply to join the AEEE ExCom at Government Engineering College Wayanad.">
+  <title>ExCom Application | AEEE GEC Wayanad</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 25px;
-    }
-
-    .application-section {
-      min-height: 80vh;
-      padding: 90px 20px 110px;
-      background: #10110f;
-      color: #f4f3ed;
-    }
-
-    .form-heading,
-    .application-form {
-      width: min(100%, 720px);
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .form-heading > p {
-      color: #aaa99f;
-      font-size: 16px;
-      line-height: 1.9;
-    }
-
-    .open-note {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 25px 0 35px;
-      color: #c5f568;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
-
-    .status-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #c5f568;
-    }
-
-    .note-divider {
-      color: #77796e;
-    }
-
-    .application-form {
-      padding: 35px;
-      border: 1px solid #30322b;
-      background: #171915;
-    }
-
-    .form-topline {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-bottom: 35px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #30322b;
-      color: #c5f568;
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-    }
-
-    .application-form > label:not(.consent),
-    .field-group > label {
-      display: block;
-      margin: 23px 0 10px;
-      color: #f4f3ed;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-    }
-
-    .application-form label b {
-      color: #c5f568;
-    }
-
-    .application-form input:not([type="checkbox"]),
-    .application-form select,
-    .application-form textarea {
-      display: block;
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #393b33;
-      border-radius: 0;
-      outline: none;
-      background: #10110f;
-      color: #f4f3ed;
-      font: inherit;
-      font-size: 14px;
-      box-sizing: border-box;
-    }
-
-    .application-form input:focus,
-    .application-form select:focus,
-    .application-form textarea:focus {
-      border-color: #c5f568;
-    }
-
-    .application-form input::placeholder,
-    .application-form textarea::placeholder {
-      color: #77796e;
-    }
-
-    .application-form textarea {
-      resize: vertical;
-      line-height: 1.7;
-    }
-
-    .field-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .field-group > label {
-      margin-top: 23px;
-    }
-
-    .consent {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin: 28px 0;
-      color: #aaa99f;
-      font-size: 12px;
-      line-height: 1.8;
-    }
-
-    .consent input {
-      flex-shrink: 0;
-      width: 17px;
-      height: 17px;
-      margin-top: 3px;
-      accent-color: #c5f568;
-    }
-
-    .submit-button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      padding: 20px;
-      border: 1px solid #c5f568;
-      background: #c5f568;
-      color: #10110f;
-      font: inherit;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      cursor: pointer;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .submit-button:hover {
-      background: transparent;
-      color: #c5f568;
-    }
-
-    .button-arrow {
-      font-size: 20px;
-    }
-
-    .form-status {
-      color: #c5f568;
-      font-size: 13px;
-      line-height: 1.7;
-    }
-
-    .privacy-note {
-      margin-top: 24px;
-      color: #77796e;
-      font-size: 11px;
-      line-height: 1.8;
-    }
-
-    .application-page .site-footer {
-      background: #090a08;
-    }
-
-    .application-page .footer-brand img {
-      object-fit: contain;
-    }
-
-    @media (max-width: 600px) {
-      .application-section {
-        padding: 60px 16px 75px;
-      }
-
-      .application-form {
-        padding: 22px;
-      }
-
-      .field-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .form-topline {
-        font-size: 9px;
-      }
-    }
-  </style>
 </head>
-
-<body class="application-page" id="top">
-
-  <!-- HEADER -->
+<body class="application-page">
   <header class="site-header">
-
-    <a class="mini-brand" href="index.html" aria-label="AEEE home">
-      <img src="aeee-logo.png" alt="AEEE logo">
-      <span>AEEE</span>
-    </a>
-
-    <span class="location">
-      GOVERNMENT ENGINEERING COLLEGE WAYANAD
-      <i></i>
-    </span>
-
-    <a class="header-cta" href="#application">
-      EXECOM CALL <span>↘</span>
-    </a>
-
+    <a class="mini-brand" href="index.html" aria-label="AEEE home"><img src="aeee-logo.png" alt="AEEE logo"><span>AEEE</span></a>
+    <span class="location">GOVERNMENT ENGINEERING COLLEGE WAYANAD <i></i></span>
+    <a class="header-cta" href="#application">EXCOM CALL <span>↘</span></a>
   </header>
-
-
   <main>
-
-    <!-- APPLICATION INTRODUCTION -->
     <section class="application-section" id="application">
-
       <div class="form-heading reveal">
-
-        <span class="section-label">JOIN THE TEAM</span>
-
-        <h1>
-          Execom <span style="color:#c5f568;">Application</span>
-        </h1>
-
-        <p>
-          Want to help run AEEE? Tell us a little about yourself and how
-          you would like to contribute. You don't need to have everything
-          figured out — just bring your curiosity and initiative.
-        </p>
-
-        <div class="open-note">
-          <span class="status-dot"></span>
-          APPLICATIONS OPEN
-          <span class="note-divider">/</span>
-          S1 · S3 · S5 · S7
-        </div>
-
+        <p class="section-kicker"><span>01</span> / EXCOM APPLICATIONS</p>
+        <h2>MAKE YOUR<br><span>MARK.</span></h2>
+        <p>Want to help run AEEE? Tell us a little about yourself and how you would like to contribute. You don't need to have everything figured out — just bring your curiosity and initiative.</p>
+        <div class="open-note"><span class="status-dot"></span> APPLICATIONS OPEN <span class="note-divider">/</span> S1 · S3 · S5 · S7</div>
       </div>
 
-
-      <!-- APPLICATION FORM -->
-      <form
-        class="application-form reveal"
-        id="applicationForm"
-        action="https://formspree.io/f/myekapvb"
-        method="POST">
-
-        <div class="form-topline">
-          <span>APPLICATION FORM</span>
-          <span>FIELDS MARKED * ARE REQUIRED</span>
-        </div>
-
-        <label for="name">
-          FULL NAME <b>*</b>
-        </label>
-
-        <input
-          id="name"
-          name="name"
-          type="text"
-          autocomplete="name"
-          placeholder="Your full name"
-          maxlength="100"
-          required>
-
+      <form class="application-form reveal" id="applicationForm" action="https://formspree.io/f/myekapvb" method="POST">
+        <div class="form-topline"><span>APPLICATION FORM</span><span>FIELDS MARKED * ARE REQUIRED</span></div>
+        <label for="name">FULL NAME <b>*</b></label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your full name" maxlength="100" required>
 
         <div class="field-row">
-
           <div class="field-group">
-
-            <label for="semester">
-              SEMESTER <b>*</b>
-            </label>
-
+            <label for="semester">SEMESTER <b>*</b></label>
             <select id="semester" name="semester" required>
               <option value="" selected disabled>Select semester</option>
-              <option value="S1">S1</option>
-              <option value="S3">S3</option>
-              <option value="S5">S5</option>
-              <option value="S7">S7</option>
+              <option value="S1">S1</option><option value="S3">S3</option><option value="S5">S5</option><option value="S7">S7</option>
             </select>
-
           </div>
-
-
           <div class="field-group">
-
-            <label for="phone">
-              PHONE NUMBER <b>*</b>
-            </label>
-
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autocomplete="tel"
-              placeholder="+91 ..."
-              maxlength="20"
-              required>
-
+            <label for="phone">PHONE NUMBER <b>*</b></label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+91 ..." maxlength="20" required>
           </div>
-
         </div>
 
+        <label for="email">EMAIL ADDRESS <b>*</b></label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="150" required>
 
-        <label for="capable">
-          WHAT ARE YOU CAPABLE OF? <b>*</b>
-        </label>
+        <label for="capable">WHAT ARE YOU CAPABLE OF? <b>*</b></label>
+        <textarea id="capable" name="capable" rows="4" maxlength="1200" placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..." required></textarea>
 
-        <textarea
-          id="capable"
-          name="capable"
-          rows="4"
-          maxlength="1200"
-          placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..."
-          required></textarea>
+        <label for="skills">SKILLS & INTERESTS</label>
+        <input id="skills" name="skills" type="text" maxlength="300" placeholder="e.g. design, organising, coding, media, speaking">
 
-
-        <label for="skills">
-          SKILLS &amp; INTERESTS
-        </label>
-
-        <input
-          id="skills"
-          name="skills"
-          type="text"
-          maxlength="300"
-          placeholder="e.g. design, organising, media, speaking">
-
-
-        <label class="consent">
-
-          <input
-            type="checkbox"
-            name="consent"
-            value="yes"
-            required>
-
-          <span>
-            I confirm these details are accurate and agree to be contacted
-            about the AEEE Execom call.
-          </span>
-
-        </label>
-
-
-        <button class="submit-button" type="submit">
-          <span class="button-text">SEND APPLICATION</span>
-          <span class="button-arrow">↗</span>
-        </button>
-
-        <p
-          class="form-status"
-          id="formStatus"
-          role="status"
-          aria-live="polite"></p>
-
-        <p class="privacy-note">
-          Your details will be used only for the Execom application process
-          and should be accessed only by the authorised team.
-        </p>
-
+        <label class="consent"><input type="checkbox" name="consent" value="yes" required><span>I confirm these details are accurate and agree to be contacted about the AEEE ExCom call.</span></label>
+        <button class="submit-button" type="submit"><span class="button-text">SEND APPLICATION</span><span class="button-arrow">↗</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="privacy-note">Your details will be used only for the ExCom application process and should be accessed only by the authorised team.</p>
       </form>
-
     </section>
-
   </main>
-
-
-  <!-- FOOTER -->
-  <footer class="site-footer" id="footer">
-
-    <div class="section-container footer-grid">
-
-      <!-- Footer branding -->
-      <div class="footer-about">
-
-        <a class="footer-brand" href="index.html">
-          <img src="aeee-logo-white.png" alt="AEEE logo">
-
-          <span>
-            AEEE
-            <small>GEC WAYANAD</small>
-          </span>
-        </a>
-
-        <p>
-          Association of Electrical and Electronics Engineers.
-          Learn, build and lead together.
-        </p>
-
-      </div>
-
-
-      <!-- Contact and social links -->
-      <div class="footer-contact">
-
-        <h3>Get in touch</h3>
-
-        <a href="tel:+917994579262">
-          +91 7994579262
-        </a>
-
-        <a
-          href="https://www.instagram.com/aeee_gecw/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Instagram ↗
-        </a>
-
-        <a
-          href="https://wa.me/917994579262"
-          target="_blank"
-          rel="noopener noreferrer">
-          WhatsApp ↗
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- FOOTER BOTTOM -->
-    <div class="section-container footer-bottom">
-
-      <span>
-        © <span id="year"></span>
-        AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD
-      </span>
-
-      <a href="#top">BACK TO TOP ↑</a>
-
-      <span>LEARN. BUILD. BELONG.</span>
-
-    </div>
-
+  <footer class="site-footer">
+    <a class="footer-brand" href="#home"><img src="aeee-logo.png" alt=""><span>AEEE<small>GEC WAYANAD</small></span></a>
+    <p>GOOD IDEAS DESERVE<br>PEOPLE WHO BUILD THEM.</p>
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+    <div class="footer-bottom"><span>© <span id="year"></span> AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD</span><span>LEARN. BUILD. BELONG.</span></div>
   </footer>
-
-
-  <!-- SCRIPTS -->
   <script src="script.js"></script>
-
-  <script>
-    // Copyright year
-    const yearElement = document.getElementById("year");
-
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  </script>
-
 </body>
 </html>

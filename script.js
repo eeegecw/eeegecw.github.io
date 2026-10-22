@@ -50,13 +50,7 @@ if (form) {
       if (!response.ok || result.errors) {
         throw new Error((result.errors || []).map((e) => e.message).join(", ") || "Submission failed.");
       }
-      form.reset();
-      if (status) {
-        status.textContent = "Thank you! Your application has been submitted successfully.";
-        status.style.color = "#39751c";
-        status.setAttribute("role", "status");
-      }
-      if (buttonText) buttonText.textContent = "APPLICATION SENT";
+      window.location.assign("thankyou.html");
     } catch (error) {
       console.error("AEEE application submission error:", error);
       if (status) {
