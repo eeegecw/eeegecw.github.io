@@ -27,6 +27,482 @@ input::placeholder,textarea::placeholder{color:#777a70}
 input:focus,select:focus,textarea:focus{border-color:var(--lime);box-shadow:0 0 0 2px rgba(199,243,107,.12)}
 .consent{color:#b7b8b0}.consent input{accent-color:var(--lime)}
 .submit-button{background:var(--lime);color:#10110f}.submit-button:disabled{background:#9dbb58;color:#10110f}
+
+/* =========================================
+   AEEE DARK + LIME THEME
+   Matches the black and lime homepage design
+========================================= */
+
+:root {
+  --aeee-bg: #10110f;
+  --aeee-bg-soft: #171915;
+  --aeee-card: #191b17;
+  --aeee-lime: #c5f568;
+  --aeee-white: #f4f3ed;
+  --aeee-muted: #aaa99f;
+  --aeee-border: #30322b;
+}
+
+/* Shared sections */
+
+.section-container {
+  width: min(1380px, 84%);
+  margin: 0 auto;
+}
+
+.about-section,
+.contact-section {
+  background: var(--aeee-bg);
+  color: var(--aeee-white);
+  padding: 110px 0;
+}
+
+.section-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: var(--aeee-lime);
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+/* About section */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.about-copy h2,
+.contact-section h2 {
+  margin: 0 0 26px;
+  color: var(--aeee-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(40px, 5vw, 68px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.about-copy > p,
+.contact-intro {
+  max-width: 650px;
+  margin: 0;
+  color: var(--aeee-muted);
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.about-cards {
+  display: grid;
+  gap: 15px;
+}
+
+.about-card {
+  position: relative;
+  padding: 27px 30px;
+  overflow: hidden;
+  background: var(--aeee-card);
+  border: 1px solid var(--aeee-border);
+  border-left: 3px solid var(--aeee-lime);
+  border-radius: 3px;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.about-card:hover {
+  background: #20231b;
+  transform: translateX(5px);
+  border-color: var(--aeee-lime);
+}
+
+.about-card h3 {
+  margin: 0 0 10px;
+  color: var(--aeee-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--aeee-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.build-card {
+  border-left-color: #d4d2c8;
+}
+
+.lead-card {
+  border-left-color: #77796e;
+}
+
+/* Execom registration banner */
+
+.registration-section {
+  position: relative;
+  overflow: hidden;
+  padding: 95px 0;
+  background: var(--aeee-lime);
+  color: var(--aeee-bg);
+}
+
+.registration-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.registration-section .section-label {
+  color: #303a1d;
+}
+
+.registration-grid h2 {
+  max-width: 800px;
+  margin: 0 0 22px;
+  color: var(--aeee-bg);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.registration-grid p {
+  max-width: 740px;
+  margin: 0;
+  color: #30372a;
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.registration-button {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 22px 28px;
+  border: 1px solid var(--aeee-bg);
+  border-radius: 0;
+  background: var(--aeee-bg);
+  color: var(--aeee-white);
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.registration-button span {
+  font-size: 19px;
+}
+
+.registration-button:hover {
+  background: transparent;
+  color: var(--aeee-bg);
+}
+
+/* Contact section */
+
+.contact-section {
+  padding-top: 110px;
+  padding-bottom: 115px;
+}
+
+.contact-section h2 {
+  margin-bottom: 22px;
+}
+
+.contact-intro {
+  max-width: 750px;
+  margin-bottom: 45px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.contact-card {
+  min-height: 185px;
+  padding: 30px;
+  background: var(--aeee-card);
+  border: 1px solid var(--aeee-border);
+  border-radius: 3px;
+  transition: border-color 0.25s ease;
+}
+
+.contact-card:hover {
+  border-color: var(--aeee-lime);
+}
+
+.contact-card h3 {
+  margin: 0 0 16px;
+  color: var(--aeee-lime);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 20px;
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--aeee-muted);
+  font-size: 15px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+.contact-card p {
+  margin: 0;
+}
+
+.contact-card a {
+  text-decoration-color: #66685e;
+  text-underline-offset: 5px;
+}
+
+.contact-card a:hover {
+  color: var(--aeee-lime);
+}
+
+/* Footer */
+
+.site-footer {
+  padding: 70px 0 25px;
+  background: #090a08;
+  color: var(--aeee-white);
+  border-top: 1px solid var(--aeee-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 1fr;
+  gap: 60px;
+  padding-bottom: 55px;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--aeee-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-brand img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-brand small {
+  display: block;
+  margin-top: 5px;
+  color: var(--aeee-lime);
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.footer-about p {
+  max-width: 360px;
+  margin-top: 22px;
+  color: var(--aeee-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.footer-grid h3 {
+  margin: 0 0 23px;
+  color: var(--aeee-white);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.footer-links,
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: var(--aeee-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--aeee-lime);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding-top: 24px;
+  border-top: 1px solid var(--aeee-border);
+  color: #898a80;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.footer-bottom a {
+  color: var(--aeee-white);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--aeee-lime);
+}
+
+/* Smooth scrolling */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .section-container {
+    width: 88%;
+  }
+
+  .about-grid {
+    gap: 45px;
+  }
+
+  .registration-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .registration-button {
+    justify-self: start;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-card {
+    min-height: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section,
+  .contact-section {
+    padding: 75px 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .about-copy h2,
+  .contact-section h2 {
+    font-size: 42px;
+  }
+
+  .about-copy > p,
+  .contact-intro {
+    font-size: 15px;
+  }
+
+  .about-card {
+    padding: 24px 22px;
+  }
+
+  .registration-section {
+    padding: 70px 0;
+  }
+
+  .registration-grid h2 {
+    font-size: 39px;
+  }
+
+  .registration-grid p {
+    font-size: 15px;
+  }
+
+  .registration-button {
+    width: 100%;
+    padding: 19px 15px;
+    font-size: 11px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .footer-about {
+    grid-column: auto;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    line-height: 1.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .about-card,
+  .contact-card,
+  .registration-button {
+    transition: none;
+  }
+}
+
 .privacy-note{color:#888b80}
 .site-footer{background:#f4f3ee;color:#10110f;border-top:1px solid #d8d7d0}.footer-brand small,.site-footer>p,.back-top{color:#5d5f58}.footer-bottom{border-top-color:#d8d7d0;color:#686a62}
 @media(max-width:760px){.application-section{padding-left:20px;padding-right:20px}.header-cta{min-width:auto;padding:11px 10px}}
