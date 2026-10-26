@@ -1,6 +1,5 @@
-
 const DROPGRAM_ENDPOINT =
-  "https://dropgram.anokhagecw.workers.dev//f/fk_xafV6BHiEnZKU38RZBAQXA";
+  "https://dropgram.anokhagecw.workers.dev/f/fk_xafV6BHiEnZKU38RZBAQXA";
 
 const form = document.getElementById("applicationForm");
 const status = document.getElementById("formStatus");
@@ -111,6 +110,7 @@ if (form) {
 
       // SUCCESS
       form.reset();
+      window.location.href = "thankyou.html";
 
       if (status) {
         status.textContent =
