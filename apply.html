@@ -12,7 +12,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +38,6 @@
     </a>
 
   </header>
-
 
   <main>
 
@@ -66,12 +67,11 @@
 
       </div>
 
-
       <!-- APPLICATION FORM -->
       <form
         class="application-form reveal"
         id="applicationForm"
-        action="https://formspree.io/f/myekapvb"
+        action="https://dropgram.anokhagecw.workers.dev//f/fk_xafV6BHiEnZKU38RZBAQXA"
         method="POST">
 
         <div class="form-topline">
@@ -91,6 +91,17 @@
           maxlength="100"
           required>
 
+        <!-- EMAIL -->
+        <label for="email">EMAIL ADDRESS <b>*</b></label>
+
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          placeholder="Your email address"
+          maxlength="254"
+          required>
 
         <!-- SEMESTER AND PHONE -->
         <div class="field-row">
@@ -126,11 +137,8 @@
 
         </div>
 
-
         <!-- CAPABILITIES -->
-        <label for="capable">
-          WHAT ARE YOU CAPABLE OF? <b></b>
-        </label>
+        <label for="capable">WHAT ARE YOU CAPABLE OF?</label>
 
         <textarea
           id="capable"
@@ -138,8 +146,7 @@
           rows="4"
           maxlength="1200"
           placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..."
-          ></textarea>
-
+        ></textarea>
 
         <!-- SKILLS -->
         <label for="skills">SKILLS &amp; INTERESTS <b>*</b></label>
@@ -151,7 +158,6 @@
           maxlength="300"
           placeholder="e.g. design, organising, documentation, media, speaking"
           required>
-
 
         <!-- CONSENT -->
         <label class="consent">
@@ -169,6 +175,14 @@
 
         </label>
 
+        <!-- SPAM TRAP: KEEP HIDDEN -->
+        <input
+          type="text"
+          name="_gotcha"
+          style="display:none"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true">
 
         <!-- SUBMIT BUTTON -->
         <button class="submit-button" type="submit">
@@ -192,7 +206,6 @@
     </section>
 
   </main>
-
 
   <!-- FOOTER -->
   <footer class="site-footer" id="footer">
@@ -226,7 +239,6 @@
 
   </footer>
 
-
   <!-- EXISTING SITE SCRIPT -->
   <script src="script.js"></script>
 
@@ -239,7 +251,7 @@
     }
   </script>
 
-  <!-- FORM SUBMISSION AND SUCCESS REDIRECT -->
+  <!-- DROPGRAM FORM SUBMISSION AND SUCCESS REDIRECT -->
   <script>
     const applicationForm = document.getElementById("applicationForm");
     const formStatus = document.getElementById("formStatus");
@@ -249,12 +261,12 @@
     applicationForm.addEventListener("submit", async function (event) {
       event.preventDefault();
 
-      // Validate required fields before submitting
+      // Validate required fields
       if (!applicationForm.reportValidity()) {
         return;
       }
 
-      // Prevent duplicate submissions while sending
+      // Prevent duplicate submissions
       submitButton.disabled = true;
       buttonText.textContent = "SENDING APPLICATION...";
       formStatus.textContent = "";
