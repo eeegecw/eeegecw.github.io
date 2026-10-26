@@ -71,7 +71,7 @@
       <form
         class="application-form reveal"
         id="applicationForm"
-        action="https://dropgram.anokhagecw.workers.dev//f/fk_xafV6BHiEnZKU38RZBAQXA"
+        action="https://dropgram.anokhagecw.workers.dev/f/fk_xafV6BHiEnZKU38RZBAQXA"
         method="POST">
 
         <div class="form-topline">
@@ -249,56 +249,6 @@
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
-  </script>
-
-  <!-- DROPGRAM FORM SUBMISSION AND SUCCESS REDIRECT -->
-  <script>
-    const applicationForm = document.getElementById("applicationForm");
-    const formStatus = document.getElementById("formStatus");
-    const submitButton = applicationForm.querySelector(".submit-button");
-    const buttonText = submitButton.querySelector(".button-text");
-
-    applicationForm.addEventListener("submit", async function (event) {
-      event.preventDefault();
-
-      // Validate required fields
-      if (!applicationForm.reportValidity()) {
-        return;
-      }
-
-      // Prevent duplicate submissions
-      submitButton.disabled = true;
-      buttonText.textContent = "SENDING APPLICATION...";
-      formStatus.textContent = "";
-
-      try {
-        const response = await fetch(applicationForm.action, {
-          method: "POST",
-          body: new FormData(applicationForm),
-          headers: {
-            "Accept": "application/json"
-          }
-        });
-
-        if (response.ok) {
-          // Redirect only after successful submission
-          window.location.href = "thankyou.html";
-        } else {
-          formStatus.textContent =
-            "Your application could not be submitted. Please try again.";
-
-          submitButton.disabled = false;
-          buttonText.textContent = "SEND APPLICATION";
-        }
-
-      } catch (error) {
-        formStatus.textContent =
-          "Connection error. Please check your internet and try again.";
-
-        submitButton.disabled = false;
-        buttonText.textContent = "SEND APPLICATION";
-      }
-    });
   </script>
 
 </body>
