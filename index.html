@@ -14,6 +14,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <style>
+    .submission-countdown{width:min(520px,100%);margin:0 0 25px;padding:18px 22px;border:1px solid #3b4030;background:rgba(23,25,21,.92);text-align:center}
+    .countdown-heading{margin:0 0 13px;color:#c5f568;font-size:10px;font-weight:700;letter-spacing:.2em}
+    .countdown-timer{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .countdown-unit{display:flex;flex-direction:column;gap:4px}
+    .countdown-unit span{font-family:"Space Grotesk",sans-serif;color:#f4f3ed;font-size:clamp(25px,4vw,38px);font-weight:700;line-height:1}
+    .countdown-unit small{color:#aaa99f;font-size:8px;font-weight:700;letter-spacing:.14em}
+    .countdown-deadline{margin:13px 0 0;color:#c9cabe;font-size:9px;font-weight:600;letter-spacing:.12em}
+    .countdown-closed{margin:0;color:#c5f568;font-size:15px;font-weight:700;letter-spacing:.12em}
+    @media(max-width:420px){.submission-countdown{padding:16px 10px}.countdown-timer{gap:5px}.countdown-unit span{font-size:25px}}
+  </style>
 </head>
 
 <body>
