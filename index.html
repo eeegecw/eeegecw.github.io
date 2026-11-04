@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -71,6 +70,18 @@
           Be part of the team that brings ideas to life, creates meaningful
           experiences, and makes our AEEE association stronger.
         </p>
+
+        <!-- SUBMISSION DEADLINE COUNTDOWN -->
+        <div class="submission-countdown reveal" aria-live="polite">
+          <p class="countdown-heading">SUBMISSIONS CLOSE IN</p>
+          <div class="countdown-timer" id="submission-countdown">
+            <div class="countdown-unit"><span id="countdown-days">--</span><small>DAYS</small></div>
+            <div class="countdown-unit"><span id="countdown-hours">--</span><small>HOURS</small></div>
+            <div class="countdown-unit"><span id="countdown-minutes">--</span><small>MINUTES</small></div>
+            <div class="countdown-unit"><span id="countdown-seconds">--</span><small>SECONDS</small></div>
+          </div>
+          <p class="countdown-deadline">DEADLINE · 5 NOVEMBER 2026 · 5:00 PM IST</p>
+        </div>
 
         <a class="primary-button reveal" href="apply.html">
           EXECOM CALL <span>↗</span>
@@ -321,6 +332,34 @@
     if (yearElement) {
       yearElement.textContent = new Date().getFullYear();
     }
+
+    // Deadline is 5 November 2026, 5:00 PM India Standard Time.
+    const submissionDeadline = new Date("2026-11-05T17:00:00+05:30").getTime();
+
+    function updateSubmissionCountdown() {
+      const remaining = submissionDeadline - Date.now();
+      const countdown = document.getElementById("submission-countdown");
+
+      if (!countdown) return;
+
+      if (remaining <= 0) {
+        countdown.innerHTML = '<p class="countdown-closed">SUBMISSIONS ARE NOW CLOSED</p>';
+        return;
+      }
+
+      const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+      const seconds = Math.floor((remaining / 1000) % 60);
+
+      document.getElementById("countdown-days").textContent = String(days).padStart(2, "0");
+      document.getElementById("countdown-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("countdown-minutes").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("countdown-seconds").textContent = String(seconds).padStart(2, "0");
+    }
+
+    updateSubmissionCountdown();
+    setInterval(updateSubmissionCountdown, 1000);
   </script>
 
 </body>
