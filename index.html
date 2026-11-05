@@ -1,62 +1,98 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#ffffff">
-<meta name="description" content="Thank you for your submissions to the AEEE ExCom Elections at Government Engineering College Wayanad. Applications are now closed.">
-<title>Thank You for Your Submissions | AEEE GEC Wayanad</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{--lime:#a7f000;--ink:#080909}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;font-family:"DM Sans",Arial,sans-serif;color:var(--ink)}
-body{min-height:100vh;background:#fff;overflow-x:hidden;display:flex;align-items:center;justify-content:center;padding:54px 24px 100px;position:relative}
-.corner{position:fixed;z-index:0;width:280px;height:180px;background:var(--lime)}
-.corner:after{content:"";position:absolute;inset:0;background:#050606}
-.corner.top{top:0;left:0;clip-path:polygon(0 0,100% 0,0 100%)}
-.corner.top:after{clip-path:polygon(0 0,68% 0,0 65%)}
-.corner.bottom{right:0;bottom:0;clip-path:polygon(100% 0,100% 100%,0 100%)}
-.corner.bottom:after{clip-path:polygon(100% 36%,100% 100%,35% 100%)}
-main{position:relative;z-index:1;width:min(1100px,100%);text-align:center}
-.brand{display:flex;flex-direction:column;align-items:center;margin:0 auto 42px}
-.brand svg{width:220px;height:145px;display:block}
-.brand-name{font-size:17px;font-weight:800;letter-spacing:.17em;margin-top:5px}
-.college{font-size:clamp(10px,1.6vw,16px);font-weight:700;letter-spacing:.23em;margin:12px 0 0}
-h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(48px,9vw,112px);line-height:.95;letter-spacing:-.055em;margin:0 0 10px;font-weight:700}
-.accent{display:inline-block;background:var(--lime);padding:8px 28px 10px;font-family:"Space Grotesk",sans-serif;font-size:clamp(22px,4.3vw,54px);font-weight:700;font-style:italic;letter-spacing:-.025em;transform:skew(-3deg);margin:0 auto 36px}
-.message{font-size:clamp(16px,2.2vw,26px);line-height:1.55;margin:0 auto 16px;max-width:800px}
-.message strong{font-weight:800}
-.thanks{font-size:clamp(16px,2vw,24px);line-height:1.5;margin:0 auto;max-width:850px}
-.divider{display:flex;align-items:center;justify-content:center;gap:28px;margin:28px auto 16px;color:var(--lime)}
-.divider span{height:2px;width:min(190px,22vw);background:var(--lime)}
-.divider b{font-size:35px;line-height:1}
-.building{width:min(800px,95%);height:90px;margin:0 auto;opacity:.42;border-bottom:1px solid #777;position:relative}
-.building:before{content:"";position:absolute;left:8%;right:8%;bottom:0;height:60px;border:1px solid #777;border-bottom:0;clip-path:polygon(0 24%,10% 0,22% 20%,34% 0,50% 20%,66% 0,78% 20%,90% 0,100% 24%,100% 100%,0 100%)}
-.building:after{content:"GOVERNMENT ENGINEERING COLLEGE WAYANAD";position:absolute;left:30%;right:30%;bottom:25px;font-size:8px;font-weight:700;letter-spacing:.05em}
-@media(max-width:600px){body{padding:45px 18px 80px}.corner{width:150px;height:105px}.brand{margin-bottom:30px}.brand svg{width:170px;height:112px}.brand-name{font-size:12px}.college{letter-spacing:.12em;line-height:1.5}.accent{padding:8px 12px;margin-bottom:28px}.message{font-size:16px}.thanks{font-size:16px}.building{height:65px}.building:after{font-size:6px;bottom:20px}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Thank you for your submissions to the AEEE ExCom Elections at Government Engineering College Wayanad. Applications are now closed.">
+  <title>Thank You for Your Submissions | AEEE GEC Wayanad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#090b0a;--lime:#a8ed00;--muted:#555951}
+    *{box-sizing:border-box}
+    html{min-height:100%;background:#fff}
+    body{margin:0;min-height:100vh;overflow-x:hidden;background:#fff;color:var(--ink);font-family:"DM Sans",Arial,sans-serif;display:flex;align-items:center;justify-content:center;padding:38px 24px 92px;position:relative}
+    .corner{position:fixed;z-index:0;width:clamp(145px,23vw,340px);height:clamp(115px,17vw,245px);pointer-events:none}
+    .corner:before,.corner:after{content:"";position:absolute;inset:0}
+    .corner--top{top:0;left:0}
+    .corner--top:before{background:var(--lime);clip-path:polygon(0 0,100% 0,0 100%)}
+    .corner--top:after{background:var(--ink);clip-path:polygon(0 0,68% 0,0 63%)}
+    .corner--bottom{right:0;bottom:0}
+    .corner--bottom:before{background:var(--lime);clip-path:polygon(100% 0,100% 100%,0 100%)}
+    .corner--bottom:after{background:var(--ink);clip-path:polygon(100% 38%,100% 100%,35% 100%)}
+    main{position:relative;z-index:1;width:min(1120px,100%);text-align:center}
+    .brand{display:flex;flex-direction:column;align-items:center;margin:0 auto 38px}
+    .brand-logo{width:clamp(126px,17vw,190px);height:clamp(126px,17vw,190px);object-fit:contain;display:block}
+    .brand-caption{font-size:clamp(10px,1.15vw,14px);font-weight:800;letter-spacing:.18em;line-height:1.6;text-transform:uppercase;margin:4px 0 0}
+    .college{font-size:clamp(10px,1.45vw,15px);font-weight:800;letter-spacing:.23em;margin:13px 0 0}
+    .title-wrap{position:relative;display:inline-block;margin:0 auto 8px}
+    h1{font-family:"Space Grotesk","DM Sans",sans-serif;font-size:clamp(52px,10vw,116px);line-height:.92;letter-spacing:-.065em;font-weight:700;margin:0;text-transform:uppercase;animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
+    .spark{position:absolute;right:-42px;top:-27px;width:44px;height:50px}
+    .spark i{position:absolute;width:9px;height:25px;border-radius:9px;background:var(--lime);transform-origin:bottom center}
+    .spark i:nth-child(1){left:5px;top:0;transform:rotate(4deg)}
+    .spark i:nth-child(2){left:23px;top:7px;transform:rotate(31deg)}
+    .spark i:nth-child(3){left:34px;top:25px;height:20px;transform:rotate(62deg)}
+    .highlight{display:table;margin:13px auto 34px;padding:7px 25px 10px;background:var(--lime);font-family:"Space Grotesk",sans-serif;font-size:clamp(23px,4.25vw,53px);font-weight:700;font-style:italic;line-height:1.08;letter-spacing:-.035em;transform:skew(-3deg);animation:rise .8s .12s cubic-bezier(.2,.8,.2,1) both}
+    .message{font-size:clamp(16px,2.15vw,25px);line-height:1.5;margin:0 auto 16px;max-width:850px}
+    .message strong{font-weight:800}
+    .appreciation{font-size:clamp(16px,2.05vw,24px);line-height:1.5;margin:0 auto;max-width:880px}
+    .divider{display:flex;align-items:center;justify-content:center;gap:26px;margin:25px auto 13px;color:var(--lime)}
+    .divider span{width:min(195px,23vw);height:2px;background:var(--lime)}
+    .bolt{font-size:35px;line-height:1;transform:skew(-12deg)}
+    .campus{width:min(820px,96%);height:auto;display:block;margin:0 auto;opacity:.55}
+    .campus path,.campus line,.campus rect,.campus polyline{fill:none;stroke:#8b8d87;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+    .campus .label{fill:#777b73;stroke:none;font:600 10px "DM Sans",sans-serif}
+    @keyframes rise{from{opacity:0;transform:translateY(18px) skew(-3deg)}to{opacity:1;transform:translateY(0) skew(-3deg)}}
+    h1{animation-name:fade-up}
+    @keyframes fade-up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:600px){
+      body{padding:30px 17px 72px}
+      .brand{margin-bottom:30px}
+      .brand-caption{max-width:290px;letter-spacing:.12em}
+      .college{letter-spacing:.13em;line-height:1.6;max-width:300px}
+      .highlight{padding:8px 12px;margin-bottom:27px}
+      .spark{right:-25px;top:-25px;transform:scale(.75)}
+      .message br,.appreciation br{display:none}
+      .message,.appreciation{max-width:440px}
+      .divider{gap:15px;margin-top:22px}
+      .campus{width:110%;max-width:none;margin-left:-5%}
+    }
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+  </style>
 </head>
 <body>
-<div class="corner top" aria-hidden="true"></div><div class="corner bottom" aria-hidden="true"></div>
-<main>
-<header class="brand" aria-label="EEE Association">
-<svg viewBox="0 0 300 190" role="img" aria-label="EEE logo">
-<path d="M220 20 A125 125 0 1 0 220 170" fill="none" stroke="#080909" stroke-width="13" stroke-linecap="round"/>
-<path d="M207 40 A105 105 0 1 0 207 150" fill="none" stroke="#080909" stroke-width="5" stroke-linecap="round"/>
-<text x="105" y="112" font-family="Arial,sans-serif" font-size="78" font-weight="900" font-style="italic" letter-spacing="-7" fill="#080909">EEE</text>
-</svg>
-<div class="brand-name">ASSOCIATION OF ELECTRICAL AND ELECTRONICS ENGINEERING</div>
-<p class="college">GOVERNMENT ENGINEERING COLLEGE WAYANAD</p>
-</header>
-<h1>THANK YOU!</h1>
-<div class="accent">FOR YOUR SUBMISSIONS!</div>
-<p class="message">The application window for the AEEE ExCom Elections<br>has been <strong>successfully closed.</strong></p>
-<p class="thanks">We sincerely appreciate the overwhelming response and<br>enthusiasm from all the applicants.</p>
-<div class="divider"><span></span><b>ϟ</b><span></span></div>
-<div class="building" aria-hidden="true"></div>
-</main>
+  <div class="corner corner--top" aria-hidden="true"></div>
+  <div class="corner corner--bottom" aria-hidden="true"></div>
+  <main>
+    <header class="brand">
+      <img class="brand-logo" src="aeee-logo.png" alt="AEEE original association logo">
+      <p class="brand-caption">Association of<br>Electrical and Electronics Engineering</p>
+      <p class="college">GOVERNMENT ENGINEERING COLLEGE WAYANAD</p>
+    </header>
+    <section aria-labelledby="thankyou-title">
+      <div class="title-wrap">
+        <h1 id="thankyou-title">THANK YOU!</h1>
+        <span class="spark" aria-hidden="true"><i></i><i></i><i></i></span>
+      </div>
+      <p class="highlight">FOR YOUR SUBMISSIONS!</p>
+      <p class="message">The application window for the AEEE ExCom Elections<br>has been <strong>successfully closed.</strong></p>
+      <p class="appreciation">We sincerely appreciate the overwhelming response and<br>enthusiasm from all the applicants.</p>
+      <div class="divider" aria-hidden="true"><span></span><b class="bolt">ϟ</b><span></span></div>
+    </section>
+    <svg class="campus" viewBox="0 0 900 150" role="img" aria-label="Line illustration of Government Engineering College Wayanad">
+      <path d="M95 143 L95 62 L180 62 L180 44 L270 44 L270 20 L330 44 L570 44 L630 20 L690 44 L720 44 L720 62 L805 62 L805 143"/>
+      <path d="M70 143 L70 79 L95 62 M180 62 L180 143 M270 44 L270 143 M630 44 L630 143 M720 62 L720 143 M805 62 L830 79 L830 143"/>
+      <path d="M70 79 L180 79 L270 61 L630 61 L720 79 L830 79 M55 143 L845 143"/>
+      <path d="M110 91 L165 91 L165 143 M195 91 L250 91 L250 143 M290 77 L345 77 L345 143 M555 77 L610 77 L610 143 M650 91 L705 91 L705 143 M735 91 L790 91 L790 143"/>
+      <path d="M125 102 L150 102 M210 102 L235 102 M305 90 L330 90 M570 90 L595 90 M665 102 L690 102 M750 102 L775 102"/>
+      <rect x="365" y="67" width="170" height="45" rx="1"/>
+      <text class="label" x="450" y="86" text-anchor="middle">GOVERNMENT ENGINEERING COLLEGE</text>
+      <text class="label" x="450" y="100" text-anchor="middle">WAYANAD</text>
+      <path d="M30 140 Q10 105 38 88 Q46 55 76 70 Q92 45 116 67 M870 140 Q890 105 862 88 Q854 55 824 70 Q808 45 784 67"/>
+      <path d="M20 143 Q45 123 65 143 M835 143 Q855 123 880 143"/>
+    </svg>
+  </main>
 </body>
 </html>
