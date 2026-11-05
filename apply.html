@@ -1,244 +1,62 @@
-
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10110f">
-  <meta name="description" content="Apply to join the AEEE ExCom at Government Engineering College Wayanad.">
-
-  <title>Execom Application | AEEE GEC Wayanad</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="Thank you for your submissions to the AEEE ExCom Elections at Government Engineering College Wayanad. Applications are now closed.">
+<title>Thank You for Your Submissions | AEEE GEC Wayanad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lime:#a7f000;--ink:#080909}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:"DM Sans",Arial,sans-serif;color:var(--ink)}
+body{min-height:100vh;background:#fff;overflow-x:hidden;display:flex;align-items:center;justify-content:center;padding:54px 24px 100px;position:relative}
+.corner{position:fixed;z-index:0;width:280px;height:180px;background:var(--lime)}
+.corner:after{content:"";position:absolute;inset:0;background:#050606}
+.corner.top{top:0;left:0;clip-path:polygon(0 0,100% 0,0 100%)}
+.corner.top:after{clip-path:polygon(0 0,68% 0,0 65%)}
+.corner.bottom{right:0;bottom:0;clip-path:polygon(100% 0,100% 100%,0 100%)}
+.corner.bottom:after{clip-path:polygon(100% 36%,100% 100%,35% 100%)}
+main{position:relative;z-index:1;width:min(1100px,100%);text-align:center}
+.brand{display:flex;flex-direction:column;align-items:center;margin:0 auto 42px}
+.brand svg{width:220px;height:145px;display:block}
+.brand-name{font-size:17px;font-weight:800;letter-spacing:.17em;margin-top:5px}
+.college{font-size:clamp(10px,1.6vw,16px);font-weight:700;letter-spacing:.23em;margin:12px 0 0}
+h1{font-family:"Space Grotesk",sans-serif;font-size:clamp(48px,9vw,112px);line-height:.95;letter-spacing:-.055em;margin:0 0 10px;font-weight:700}
+.accent{display:inline-block;background:var(--lime);padding:8px 28px 10px;font-family:"Space Grotesk",sans-serif;font-size:clamp(22px,4.3vw,54px);font-weight:700;font-style:italic;letter-spacing:-.025em;transform:skew(-3deg);margin:0 auto 36px}
+.message{font-size:clamp(16px,2.2vw,26px);line-height:1.55;margin:0 auto 16px;max-width:800px}
+.message strong{font-weight:800}
+.thanks{font-size:clamp(16px,2vw,24px);line-height:1.5;margin:0 auto;max-width:850px}
+.divider{display:flex;align-items:center;justify-content:center;gap:28px;margin:28px auto 16px;color:var(--lime)}
+.divider span{height:2px;width:min(190px,22vw);background:var(--lime)}
+.divider b{font-size:35px;line-height:1}
+.building{width:min(800px,95%);height:90px;margin:0 auto;opacity:.42;border-bottom:1px solid #777;position:relative}
+.building:before{content:"";position:absolute;left:8%;right:8%;bottom:0;height:60px;border:1px solid #777;border-bottom:0;clip-path:polygon(0 24%,10% 0,22% 20%,34% 0,50% 20%,66% 0,78% 20%,90% 0,100% 24%,100% 100%,0 100%)}
+.building:after{content:"GOVERNMENT ENGINEERING COLLEGE WAYANAD";position:absolute;left:30%;right:30%;bottom:25px;font-size:8px;font-weight:700;letter-spacing:.05em}
+@media(max-width:600px){body{padding:45px 18px 80px}.corner{width:150px;height:105px}.brand{margin-bottom:30px}.brand svg{width:170px;height:112px}.brand-name{font-size:12px}.college{letter-spacing:.12em;line-height:1.5}.accent{padding:8px 12px;margin-bottom:28px}.message{font-size:16px}.thanks{font-size:16px}.building{height:65px}.building:after{font-size:6px;bottom:20px}}
+</style>
 </head>
-
-<body class="application-page" id="top">
-
-  <!-- HEADER -->
-  <header class="site-header">
-
-    <a class="mini-brand" href="index.html" aria-label="AEEE home">
-      <img src="aeee-logo.png" alt="AEEE logo">
-      <span>AEEE</span>
-    </a>
-
-    <span class="location">
-      GOVERNMENT ENGINEERING COLLEGE WAYANAD <i></i>
-    </span>
-
-    <a class="header-cta" href="#application">
-      EXECOM CALL <span>↘</span>
-    </a>
-
-  </header>
-
-  <main>
-
-    <!-- APPLICATION SECTION -->
-    <section class="application-section" id="application">
-
-      <div class="form-heading reveal">
-
-        <p class="section-kicker">
-          <span>01</span> / EXECOM APPLICATIONS
-        </p>
-
-        <h2>MAKE YOUR<br><span>MARK.</span></h2>
-
-        <p>
-          Want to help run AEEE? Tell us a little about yourself and how you
-          would like to contribute. You don't need to have everything
-          figured out — just bring your curiosity and initiative.
-        </p>
-
-        <div class="open-note">
-          <span class="status-dot"></span>
-          APPLICATIONS OPEN
-          <span class="note-divider">/</span>
-          S1 · S3 · S5 · S7
-        </div>
-
-      </div>
-
-      <!-- APPLICATION FORM -->
-      <form
-        class="application-form reveal"
-        id="applicationForm"
-        action="https://dropgram.anokhagecw.workers.dev/f/fk_xafV6BHiEnZKU38RZBAQXA"
-        method="POST">
-
-        <div class="form-topline">
-          <span>APPLICATION FORM</span>
-          <span>FIELDS MARKED * ARE REQUIRED</span>
-        </div>
-
-        <!-- FULL NAME -->
-        <label for="name">FULL NAME <b>*</b></label>
-
-        <input
-          id="name"
-          name="name"
-          type="text"
-          autocomplete="name"
-          placeholder="Your full name"
-          maxlength="100"
-          required>
-
-
-        <!-- SEMESTER AND PHONE -->
-        <div class="field-row">
-
-          <div class="field-group">
-
-            <label for="semester">SEMESTER <b>*</b></label>
-
-            <select id="semester" name="semester" required>
-              <option value="" selected disabled>Select semester</option>
-              <option value="S1">S1</option>
-              <option value="S3">S3</option>
-              <option value="S5">S5</option>
-              <option value="S7">S7</option>
-            </select>
-
-          </div>
-
-          <div class="field-group">
-
-            <label for="phone">PHONE NUMBER <b>*</b></label>
-
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              autocomplete="tel"
-              placeholder="+91 ..."
-              maxlength="20"
-              required>
-
-          </div>
-
-        </div>
-
-        <!-- CAPABILITIES -->
-        <label for="capable">WHAT ARE YOU CAPABLE OF?</label>
-
-        <textarea
-          id="capable"
-          name="capable"
-          rows="4"
-          maxlength="1200"
-          placeholder="Tell us what you enjoy, what you can contribute, or what you'd like to learn..."
-        ></textarea>
-
-        <!-- SKILLS -->
-        <label for="skills">SKILLS &amp; INTERESTS <b>*</b></label>
-
-        <input
-          id="skills"
-          name="skills"
-          type="text"
-          maxlength="300"
-          placeholder="e.g. design, organising, documentation, media, speaking"
-          required>
-
-        <!-- CONSENT -->
-        <label class="consent">
-
-          <input
-            type="checkbox"
-            name="consent"
-            value="yes"
-            required>
-
-          <span>
-            I confirm these details are accurate and agree to be contacted
-            about the AEEE Execom call.
-          </span>
-
-        </label>
-
-        <!-- SPAM TRAP: KEEP HIDDEN -->
-        <input
-          type="text"
-          name="_gotcha"
-          style="display:none"
-          tabindex="-1"
-          autocomplete="off"
-          aria-hidden="true">
-
-        <!-- SUBMIT BUTTON -->
-        <button class="submit-button" type="submit">
-          <span class="button-text">SEND APPLICATION</span>
-          <span class="button-arrow">↗</span>
-        </button>
-
-        <p
-          class="form-status"
-          id="formStatus"
-          role="status"
-          aria-live="polite"></p>
-
-        <p class="privacy-note">
-          Your details will be used only for the Execom application process
-          and should be accessed only by the authorised team.
-        </p>
-
-      </form>
-
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer" id="footer">
-
-    <a class="footer-brand" href="index.html">
-      <img src="aeee-logo.png" alt="AEEE logo">
-
-      <span>
-        AEEE
-        <small>GEC WAYANAD</small>
-      </span>
-    </a>
-
-    <p>
-      GOOD IDEAS DESERVE<br>
-      PEOPLE WHO BUILD THEM.
-    </p>
-
-    <a class="back-top" href="#top">BACK TO TOP ↑</a>
-
-    <div class="footer-bottom">
-
-      <span>
-        © <span id="year"></span>
-        AEEE · GOVERNMENT ENGINEERING COLLEGE WAYANAD
-      </span>
-
-      <span>LEARN. BUILD. BELONG.</span>
-
-    </div>
-
-  </footer>
-
-  <!-- EXISTING SITE SCRIPT -->
-  <script src="script.js"></script>
-
-  <!-- COPYRIGHT YEAR -->
-  <script>
-    const yearElement = document.getElementById("year");
-
-    if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
-    }
-  </script>
-
+<body>
+<div class="corner top" aria-hidden="true"></div><div class="corner bottom" aria-hidden="true"></div>
+<main>
+<header class="brand" aria-label="EEE Association">
+<svg viewBox="0 0 300 190" role="img" aria-label="EEE logo">
+<path d="M220 20 A125 125 0 1 0 220 170" fill="none" stroke="#080909" stroke-width="13" stroke-linecap="round"/>
+<path d="M207 40 A105 105 0 1 0 207 150" fill="none" stroke="#080909" stroke-width="5" stroke-linecap="round"/>
+<text x="105" y="112" font-family="Arial,sans-serif" font-size="78" font-weight="900" font-style="italic" letter-spacing="-7" fill="#080909">EEE</text>
+</svg>
+<div class="brand-name">ASSOCIATION OF ELECTRICAL AND ELECTRONICS ENGINEERING</div>
+<p class="college">GOVERNMENT ENGINEERING COLLEGE WAYANAD</p>
+</header>
+<h1>THANK YOU!</h1>
+<div class="accent">FOR YOUR SUBMISSIONS!</div>
+<p class="message">The application window for the AEEE ExCom Elections<br>has been <strong>successfully closed.</strong></p>
+<p class="thanks">We sincerely appreciate the overwhelming response and<br>enthusiasm from all the applicants.</p>
+<div class="divider"><span></span><b>ϟ</b><span></span></div>
+<div class="building" aria-hidden="true"></div>
+</main>
 </body>
 </html>
